@@ -5,13 +5,9 @@ A macOS menu bar application that displays your OpenRouter credit usage.
 ## Features
 
 - Shows your current OpenRouter credit spending in the menu bar
-- Displays detailed information in a popover:
-  - Amount spent
-  - Remaining credits
-  - Credit limit
-- Automatically refreshes data every 30 minutes
+- Displays amount of remaining credits in the MenuBar—that's it
+- Automatically refreshes data every 30 minutes, possible with Force-Refresh too
 - Securely stores your API key in UserDefaults
-- Right-click menu with Refresh and Quit options
 
 ## Requirements
 
