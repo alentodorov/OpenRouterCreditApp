@@ -22,8 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setupMenuBar()
         fetchCreditUsage()
         
-        // Set up timer to refresh data every 30 minutes
-        timer = Timer.scheduledTimer(withTimeInterval: 30 * 60, repeats: true) { [weak self] _ in
+        // Set up timer to refresh data every 30 seconds
+        timer = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
             self?.fetchCreditUsage()
         }
     }
@@ -32,7 +32,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "dollarsign.circle", accessibilityDescription: "OpenRouter Credits")
+            // Use a simple system icon that resembles the OpenRouter logo concept
+            button.image = NSImage(systemSymbolName: "arrow.triangle.branch", accessibilityDescription: "OpenRouter Credits")
+            button.image?.size = NSSize(width: 16, height: 16)
+            
             button.action = #selector(togglePopover)
             button.target = self
         }
