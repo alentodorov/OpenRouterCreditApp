@@ -66,7 +66,7 @@ struct CreditView: View {
                         Button("Cancel") {
                             showingAPIKeyInput = false
                         }
-                        .buttonStyle(.borderless)
+                        .buttonStyle(BorderlessButtonStyle())
                         
                         Spacer()
                         
@@ -75,7 +75,7 @@ struct CreditView: View {
                             showingAPIKeyInput = false
                             viewModel.refreshData()
                         }
-                        .buttonStyle(.borderedProminent)
+                        .buttonStyle(DefaultButtonStyle())
                     }
                 }
             } else {

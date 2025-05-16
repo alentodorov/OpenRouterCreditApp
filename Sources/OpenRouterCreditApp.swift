@@ -33,7 +33,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if let button = statusItem.button {
             // Use a simple system icon that resembles the OpenRouter logo concept
-            button.image = NSImage(systemSymbolName: "arrow.triangle.branch", accessibilityDescription: "OpenRouter Credits")
+            if #available(macOS 11.0, *) {
+                button.image = NSImage(systemSymbolName: "arrow.triangle.branch", accessibilityDescription: "OpenRouter Credits")
+            } else {
+                button.image = NSImage(named: NSImage.infoName)
+            }
             button.image?.size = NSSize(width: 16, height: 16)
             
             button.action = #selector(togglePopover)

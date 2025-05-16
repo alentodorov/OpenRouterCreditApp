@@ -1,0 +1,8 @@
+{
+    "amp.commands.allowlist": [
+        "chmod +x build.sh",
+        "./build.sh",
+        "open OpenRouterCreditApp.app",
+        "sleep 2"
+    ]
+}

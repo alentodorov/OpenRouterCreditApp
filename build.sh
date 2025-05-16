@@ -52,7 +52,7 @@ cat > "$CONTENTS_DIR/Info.plist" << EOF
     <key>CFBundleVersion</key>
     <string>1</string>
     <key>LSMinimumSystemVersion</key>
-    <string>10.15</string>
+    <string>10.13</string>
     <key>LSUIElement</key>
     <true/>
     <key>NSPrincipalClass</key>
